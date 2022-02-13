@@ -9,6 +9,8 @@ import { Spacer } from "../../../components/spacer/spacer.component";
 
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 
+import { ActivityIndicator, Colors } from "react-native-paper";
+
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
@@ -19,11 +21,25 @@ const RestaurantList = styled(FlatList).attrs({
   },
 })``;
 
+const Loading = styled(ActivityIndicator)`
+  margin-left: -25px;
+`;
+const LoadingContainer = styled.View`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+`;
+
 export const Restaurantsscreen = () => {
   const { isLoading, errror, restaurants } = useContext(RestaurantsContext);
 
   return (
     <SafeArea>
+      {isLoading && (
+        <LoadingContainer>
+          <Loading size={50} animating={true} color={Colors.blue300} />
+        </LoadingContainer>
+      )}
       <SearchContainer>
         <Searchbar />
       </SearchContainer>
