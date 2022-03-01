@@ -21,6 +21,7 @@
     "camelize": "^1.0.0",
     "eslint": "^7.20.0",
     "expo": "~44.0.0",
+    "expo-camera": "~12.1.2",
     "expo-font": "~10.0.4",
     "expo-status-bar": "~1.2.0",
     "firebase": "^9.6.7",
