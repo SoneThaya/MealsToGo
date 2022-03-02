@@ -38,7 +38,6 @@ export default function App() {
     setTimeout(() => {
       signInWithEmailAndPassword(auth, "mo@binni.io", "test123")
         .then((user) => {
-          console.log("********", user);
           setIsAuthenticated(true);
         })
         .catch((e) => {

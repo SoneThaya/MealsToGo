@@ -40,7 +40,6 @@ export const FavouritesContextProvider = ({ children }) => {
 
     setFavourites(newFavourites);
   };
-  console.log("user uid", user.user.uid);
 
   useEffect(() => {
     if (user) {
