@@ -16,3 +16,4 @@ web-build/
 */node_modules/**/*
 
 /src/.env
+.runtimeconfig.json
